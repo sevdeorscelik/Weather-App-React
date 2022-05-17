@@ -1,0 +1,124 @@
+                
+{
+    "city": {
+      "id": 2643743,
+      "name": "London",
+      "coord": {
+        "lon": -0.1257,
+        "lat": 51.5085
+      },
+      "country": "GB",
+      "population": 1000000,
+      "timezone": 3600
+    },
+    "cod": "200",
+    "message": 0.05491,
+    "cnt": 3,
+    "list": [
+      {
+        "dt": 1599735600,
+        "sunrise": 1599715685,
+        "sunset": 1599762420,
+        "temp": {
+          "day": 292.05,
+          "min": 286.3,
+          "max": 292.77,
+          "night": 289.72,
+          "eve": 291.46,
+          "morn": 286.3
+        },
+        "feels_like": {
+          "day": 289.68,
+          "night": 288,
+          "eve": 288.78,
+          "morn": 284.19
+        },
+        "pressure": 1023,
+        "humidity": 40,
+        "weather": [
+          {
+            "id": 800,
+            "main": "Clear",
+            "description": "sky is clear",
+            "icon": "01d"
+          }
+        ],
+        "speed": 1.78,
+        "deg": 332,
+        "gust": 7.74,
+        "clouds": 0,
+        "pop": 0
+      },
+      {
+        "dt": 1599822000,
+        "sunrise": 1599802180,
+        "sunset": 1599848682,
+        "temp": {
+          "day": 292.26,
+          "min": 286.58,
+          "max": 293.36,
+          "night": 288.83,
+          "eve": 290.65,
+          "morn": 286.58
+        },
+        "feels_like": {
+          "day": 289.07,
+          "night": 286.12,
+          "eve": 287.85,
+          "morn": 284.39
+        },
+        "pressure": 1016,
+        "humidity": 48,
+        "weather": [
+          {
+            "id": 802,
+            "main": "Clouds",
+            "description": "scattered clouds",
+            "icon": "03d"
+          }
+        ],
+        "speed": 3.84,
+        "deg": 242,
+        "gust": 7.74,
+        "clouds": 50,
+        "pop": 0
+      },
+      {
+        "dt": 1599908400,
+        "sunrise": 1599888675,
+        "sunset": 1599934943,
+        "temp": {
+          "day": 292.86,
+          "min": 285.62,
+          "max": 293.08,
+          "night": 290.3,
+          "eve": 292.15,
+          "morn": 285.62
+        },
+        "feels_like": {
+          "day": 290.24,
+          "night": 289.13,
+          "eve": 290.42,
+          "morn": 282.9
+        },
+        "pressure": 1018,
+        "humidity": 57,
+        "weather": [
+          {
+            "id": 803,
+            "main": "Clouds",
+            "description": "broken clouds",
+            "icon": "04d"
+          }
+        ],
+        "speed": 4.19,
+        "deg": 258,
+        "gust": 7.74,
+        "clouds": 74,
+        "pop": 0
+      }
+    ]
+  }
+                     
+  
+                  
