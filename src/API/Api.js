@@ -1,16 +1,18 @@
 import axios from 'axios'
 import { useEffect, useState } from "react"
-import Data from '../components/Data'
+import City from '../components/City'
+
 
 
 
 const Api = () => {
 
-    const apiKey = 'e50869fa0414d439bf8a29c6bbd5cb6d'
-
+    //const apiKey = 'e9a52710e7a3d2c9da91287969102a28'
+    const apiKey= '35555b2c72ac4a89bf1222251221705'
+    
 
     const [data, setData] = useState({})
-    const [search, setSearch] = useState('')
+    const [search, setSearch] = useState('izmir')
     const [value, setValue] = useState('')
 
 
@@ -18,8 +20,8 @@ const Api = () => {
         async function getApi() {
 
             const response = await axios
-                //.get(`https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${apiKey}&units=metric`)
-                .get(`https://api.openweathermap.org/data/2.5/forecast/daily?q=${search}&cnt=5&appid=e50869fa0414d439bf8a29c6bbd5cb6d`)
+                //.get(`https://api.openweathermap.org/data/2.5/forecast?q=${search}&appid=${apiKey}&units=metric&days=3`)
+                .get(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${search}&days=3&aqi=yes&alerts=no`)
                 .catch((err) => console.error(err))
             setData(response.data);
 
@@ -29,12 +31,12 @@ const Api = () => {
 
     }, [search])
 
-    //console.log(data);
+    console.log(data);
 
     const onSubmit = () => {
         setSearch(value)
         setValue('')
-         
+
     }
 
     return (
@@ -45,20 +47,25 @@ const Api = () => {
 
                 {Object.entries(data).length !== 0 &&
                     (
-                        < Data data={data} />
+                        < City data={data} />
+                        
                     )
                 }
 
-                < pre >
-                    {JSON.stringify(data, null, 2)}
-                </pre>
+
             </div>
         </div >
     )
 
 }
-//<button onClick={() => {}} >click</button>
-//onChange={(e) => setSearch(e.target.value)}
+
 
 export default Api
 
+
+
+/*
+    < pre >
+        {JSON.stringify(data, null, 2)}
+    </pre>
+*/
