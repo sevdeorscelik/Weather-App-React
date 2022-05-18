@@ -1,63 +1,104 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
 
 .App {
-  
+
   text-align: center;
+
+}
+
+.api {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
   height: 100vh;
-  background-color: skyblue;
-  
+
+  /*
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+*/
+
 }
 
-.api{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-}
-
-.City{
+.CurrentDay {
   width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
-h1{
-  color: #eee;
-  padding-top: 5rem;
+.current-day-container {
+  width: 30%;
+  padding: 3rem;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.28);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.7px);
+  -webkit-backdrop-filter: blur(4.7px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
-.input-api{
+
+h1 {
+  color: #eee;
+}
+
+.input-api {
   margin: 20px;
 }
 
-.card-container{
+.card-container {
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  
+
   justify-content: space-evenly;
+
+
+
+}
+
+.card {
+  padding: 2rem;
+  
+
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.36);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(12.5px);
+-webkit-backdrop-filter: blur(12.5px);
+border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 
 
-.current-info{
+.current-info {
   display: flex;
   flex-direction: column;
-  
+
 }
-.current-info-content{
+
+.current-info-content {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 2rem;
 }
 
-.current-status{
+.current-status {
   margin: 2rem;
 }
 
-.current-day{
+.current-day {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -65,7 +106,7 @@ h1{
   gap: 1rem;
 }
 
-.card-container{
+.card-container {
   margin-top: 3rem;
   display: flex;
   flex-direction: row;
@@ -73,8 +114,7 @@ h1{
   align-items: center;
 }
 
-.card{
+.card {
   display: flex;
   flex-direction: column;
 }
-
