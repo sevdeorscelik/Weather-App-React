@@ -22,7 +22,7 @@ const City = ({ data }) => {
                     <div className="current-info-content">
                         <div>rüzgar:{data.current.wind_kph} km/s</div>
                         <div>hissedilen:{data.current.feelslike_c}</div>
-                        <div>görüs alanai:{data.current.vis_km}</div>
+                        <div>görüs alanai:{data.current.vis_km} km</div>
                     </div>
                 </div>
 

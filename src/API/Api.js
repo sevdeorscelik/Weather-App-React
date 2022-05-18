@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from "react"
 import City from '../components/City'
+import BgImages from '../components/BgImages'
 
 
 
@@ -8,8 +9,8 @@ import City from '../components/City'
 const Api = () => {
 
     //const apiKey = 'e9a52710e7a3d2c9da91287969102a28'
-    const apiKey= '35555b2c72ac4a89bf1222251221705'
-    
+    const apiKey = '35555b2c72ac4a89bf1222251221705'
+
 
     const [data, setData] = useState({})
     const [search, setSearch] = useState('izmir')
@@ -41,19 +42,18 @@ const Api = () => {
 
     return (
         <div className='api'>
-            <div>
+            
                 <input onChange={(e) => setValue(e.target.value)} value={value} type='text' className='input-api' />
                 <button onClick={onSubmit} >click</button>
 
                 {Object.entries(data).length !== 0 &&
                     (
                         < City data={data} />
-                        
+
                     )
                 }
-
-
-            </div>
+            
+            
         </div >
     )
 
