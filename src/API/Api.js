@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from "react"
 import CurrentDay from '../components/CurrentDay'
+import Footer from '../components/Footer'
 import { BgImages } from '../components/BgImages'
 import { BsSearch } from 'react-icons/bs'
 
@@ -55,7 +56,8 @@ const Api = () => {
                                 condition === "Moderate or heavy rain shower" ||
                                 condition === "Thundery outbreaks possible" ||
                                 condition === "Moderate or heavy rain with thunder" ||
-                                condition === "Light rain"
+                                condition === "Light rain" ||
+                                condition === "Patchy light rain with thunder"
 
                                 ? `url(${BgImages.rain})`
                                 : condition === "Storm" ||
@@ -93,16 +95,16 @@ const Api = () => {
                 />
                 <button onClick={onSubmit} className='search-btn'> <BsSearch size={30} /> </button>
             </div>
+
+
+            {Object.entries(data).length !== 0 &&
+                (
+                    < CurrentDay data={data} />
+                )
+            }
+
+            <Footer />
             
-
-                {Object.entries(data).length !== 0 &&
-                    (
-                        < CurrentDay data={data} />
-                    )
-                }
-            
-
-
         </div >
     )
 }

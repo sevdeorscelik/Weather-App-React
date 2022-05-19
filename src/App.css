@@ -18,9 +18,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
   min-height: 100vh;
-  
 
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -28,16 +26,17 @@
 
 }
 
+
+
 .search-cont {
-  width: 100%;
+
+  width: 99%;
   display: flex;
   justify-content: center;
- 
 
 }
 
 .search-input {
-
   padding: .5rem;
   text-align: center;
   width: 25rem;
@@ -86,8 +85,8 @@
 }
 
 .current-day-container {
-
-  padding: 3rem;
+  margin-top: 1rem;
+  padding: 2rem;
   font-size: 1.8rem;
 
   /* From https://css.glass */
@@ -149,8 +148,8 @@
 /* Forecast Day Components **********************************************************/
 
 .ForecastDays {
-
-  margin-top: 3rem;
+  width: 96vw;
+  margin-top: 1.5rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -216,79 +215,119 @@
 
 }
 
-@media screen and (max-width: 500px) {
+/*Footer *************************************/
 
-
-.search-input {
- 
-  width: 15rem;
-  font-size: 1.5rem;
-  
-}
-
-.search-input::placeholder {
-  font-size: 1.2rem;
+.Footer{
+  margin: 1.5rem 0 1rem 0;
 }
 
 
-}
+/* Responsive **************************************/
 
-@media screen and (max-width:768px){
 
-  .current-info-part1{
-  
-    flex-direction: column;
-  }
-  .current-info-part2{
-    flex-direction: column;
-  }
 
-  .card-container{
-    flex-direction: column;
+@media screen and (max-width:800px) {
 
+  .current-day-container {
+    width: 40rem;
+    font-size: 1.5rem;
   }
 
-  .days{
+
+  .card-container {
+    flex-direction: column;
+
+  }
+
+  .days {
     flex-direction: column;
   }
 
-  .ForecastDays{
+  .ForecastDays {
     flex-direction: row;
     justify-content: center;
+
+  }
+
+}
+
+@media screen and (max-width:725px) {
+
+  .current-day-container {
+    width: 30rem;
+    font-size: 1.2rem;
+  }
+
+
+  .card-container {
+    flex-direction: column;
+
+  }
+
+  .days {
+    flex-direction: column;
+  }
+
+  .ForecastDays {
+    flex-direction: row;
+    justify-content: center;
+
+  }
+
+}
+
+@media screen and (max-width: 565px) {
+
+  .current-day-container {
+    width: 18rem;
+  }
+
+  .dayName {
+    font-size: 1.2rem;
+    width: 7rem;
+  }
+
+  .card {
+    width: 7rem;
+  }
+
+  .ForecastDays {
+    width: 18rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    
+
+  }
+
+  .day-icon {
+    width: 50px;
+  }
+
+  .current-day-container {
+    font-size: 1rem;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .search-input {
+
+    width: 15rem;
+    font-size: 1.5rem;
+
+  }
+
+  .search-input::placeholder {
+    font-size: 1.2rem;
+  }
+
+  .Footer{
+    
+   
     
   }
 
+
 }
 
-@media screen and (max-width: 555px){
-
-.current-day-container{
-  width: 10rem;
-}
-
-.dayName{
-  font-size: 1.2rem;
-  width: 7rem;
-}
-
-.card{
-width: 7rem;
-}
-
-.ForecastDays{
-  width: 15rem;
-  font-size: 1.2rem;
-  
-}
-
-.day-icon{
-  width: 50px;
-}
-
-.current-day-container{
-font-size: 1.4rem;
-}
-.flex{
-  flex-direction: column;
-}
-}
