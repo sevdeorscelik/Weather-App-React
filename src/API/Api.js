@@ -2,6 +2,7 @@ import axios from 'axios'
 import { useEffect, useState } from "react"
 import CurrentDay from '../components/CurrentDay'
 import { BgImages } from '../components/BgImages'
+import { BsSearch } from 'react-icons/bs'
 
 
 const Api = () => {
@@ -74,7 +75,7 @@ const Api = () => {
                                             condition === "Fog"
                                             ? `url(${BgImages.overcast})`
                                             : `url(${BgImages.general})`
-                : `url(${BgImages.clear})`
+                : `url(${BgImages.general})`
     };
 
 
@@ -83,11 +84,18 @@ const Api = () => {
 
         <div
             className='api'
-            style={{ background: coditionStyle.background}}
-            
+            style={{ background: coditionStyle.background }}
         >
-            <input onChange={(e) => setValue(e.target.value)} value={value} type='text' className='input-api' />
-            <button onClick={onSubmit} >click</button>
+            <div className='search-cont'>
+                <input
+                    onChange={(e) => setValue(e.target.value)}
+                    value={value}
+                    type='text'
+                    className='search-input'
+                    placeholder='Please enter a city name...'
+                />
+                <button onClick={onSubmit} className='search-btn'> <BsSearch size={30}/> </button>
+            </div>
 
             {Object.entries(data).length !== 0 &&
                 (

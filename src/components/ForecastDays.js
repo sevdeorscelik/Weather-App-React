@@ -1,11 +1,11 @@
 import React from "react"
 
-const Day = ({ data }) => {
+const ForecastDays = ({ data }) => {
 
     //console.log(data.city.name);
     const forecastDay = data.forecast.forecastday
     return (
-        <div className="Day">
+        <div className="ForecastDays">
             <div className="card-container">
 
                 {
@@ -26,5 +26,4 @@ const Day = ({ data }) => {
     )
 };
 
-export default Day;
-//<img className="day-icon" src={"https:" + days.condition.icon} />
+export default ForecastDays;

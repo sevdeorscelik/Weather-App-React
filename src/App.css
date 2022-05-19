@@ -5,10 +5,10 @@
 
 
 .App {
-
   text-align: center;
-
 }
+
+/*Api Component ***********************************************************/
 
 .api {
   display: flex;
@@ -16,14 +16,68 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  height: 100vh;
+  min-height: 100vh;
 
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
 
-
 }
+
+.search-cont{
+ 
+  display: flex;
+  justify-content: center;
+  
+}
+
+
+.search-input {
+  
+  padding: .5rem;
+  text-align: center;
+  width: 25rem;
+  
+  font-size: 2rem;
+  border: none;
+  background: rgba(255, 255, 255, 0.68);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 1);
+  outline: none;
+  border-radius:  20px 0 0 20px ;
+}
+
+.search-input::placeholder {
+  font-size: 1.5rem;
+}
+
+
+.search-btn {
+  background: white;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+  padding: .8rem;
+  border-radius: 0 20px 20px 0;
+}
+
+.search:hover {
+  background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+  background-color: #f6f6f6;
+}
+
+.search:active {
+  position: relative;
+  top: 1px;
+}
+
+/* CurrentDay Component **************************************************************************/
+
+
+h1 {
+  color: #eee;
+}
+
 
 .CurrentDay {
   width: 100vw;
@@ -36,6 +90,7 @@
 .current-day-container {
   color: #eee;
   padding: 3rem;
+  font-size: 1.8rem;
 
   /* From https://css.glass */
   background: rgba(0, 0, 0, 0.45);
@@ -45,34 +100,46 @@
   -webkit-backdrop-filter: blur(6.2px);
 }
 
-h1 {
-  color: #eee;
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/*
+.current-info {
+  display: flex;
+  flex-direction: column;
+}
 
-background: rgba(255, 255, 255, 0.68);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(11.2px);
--webkit-backdrop-filter: blur(11.2px);
-border: 1px solid rgba(255, 255, 255, 1);
-*/
+.current-info-part1 {
+  margin: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+}
 
-.input-api {
-  padding: .5rem;
-  text-align: center;
-  width: 20%;
-  border-radius: 2rem;
-  font-size: 2rem;
-  border: none;
-  background: rgba(255, 255, 255, 0.68);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 1);
-  outline: none;
+.current-info-part2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.current-day {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.current-temp{
+  font-size: 3rem;
+  margin-top: 2rem;
 }
 
 
+
+/* Forecast Day Components **********************************************************/
 
 .card-container {
   display: flex;
@@ -83,39 +150,13 @@ border: 1px solid rgba(255, 255, 255, 1);
 }
 
 .card {
-  padding: 3rem;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 
-}
-
-
-
-.current-info {
-  display: flex;
-  flex-direction: column;
-
-}
-
-.current-info-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.current-status {
-  margin: 2rem;
-}
-
-.current-day {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
 }
 
 .card-container {
