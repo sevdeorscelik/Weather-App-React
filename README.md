@@ -1,16 +1,12 @@
 # Weather App Project
 
-You can visit the project [here](https://wetaher-app-react.netlify.app/)
-
----
-
-
+#### You can visit the project [here](https://wetaher-app-react.netlify.app/)
 
 ---
 
 ## Properties
 
-1. It is a react project
+1. It is a react project.
 
 2. Weather information was fetched from [www.weatherapi.com](www.weatherapi.com]) with Axios API.
 
@@ -22,4 +18,5 @@ You can visit the project [here](https://wetaher-app-react.netlify.app/)
 
 # Screenshots
 
-![Screenshot]('./src/images/ss-app.png')
+<img src="./src/images/ss-app.png" height="400" />
+
