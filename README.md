@@ -1,29 +1,25 @@
 # Weather App Project
 
-[https://wetaher-app-react.netlify.app/](here)
+You can visit the project [here](https://wetaher-app-react.netlify.app/)
 
 ---
 
-* `Axios API` ile hava durumu bilgileri [www.openweathermap.org](www.openweathermap.org) adresinden çekildi. 
 
-* Proje'de `Context API` kullanılmıştır.
-
-* Şehir bilgilerinin kullanıldığı JSON dosyası : [Cities of JSON](https://gist.github.com/ozdemirburak)
 
 ---
 
-## Özellikler
+## Properties
 
-1. Dropdown aracılığıyla Türkiye'de bulunan bir ilin seçilmesi.
+1. It is a react project
 
-2. `Context API` ile veri aktarımı.
+2. Weather information was fetched from [www.weatherapi.com](www.weatherapi.com]) with Axios API.
 
-3. Card'lara hover olduğunda transition olayı.
+3. Showing the weather information of the city entered in the input
 
-4. Bulunduğumuz günden itibaren 1 haftalık hava durumu göstermesi.
+4. Showing the weather forecast for 3 days from the current day.
 
 ---
 
 # Screenshots
 
-![Screenshot](./src/img/screenshot.png)
+![Screenshot]()
