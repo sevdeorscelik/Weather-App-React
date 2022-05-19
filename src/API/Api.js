@@ -11,11 +11,8 @@ const Api = () => {
     const apiKey = '35555b2c72ac4a89bf1222251221705'
 
     const [data, setData] = useState({})
-    const [search, setSearch] = useState('')
+    const [search, setSearch] = useState('london')
     const [value, setValue] = useState('')
-
-
-
 
 
     useEffect(() => {
@@ -94,14 +91,18 @@ const Api = () => {
                     className='search-input'
                     placeholder='Please enter a city name...'
                 />
-                <button onClick={onSubmit} className='search-btn'> <BsSearch size={30}/> </button>
+                <button onClick={onSubmit} className='search-btn'> <BsSearch size={30} /> </button>
             </div>
+            
 
-            {Object.entries(data).length !== 0 &&
-                (
-                    < CurrentDay data={data} />
-                )
-            }
+                {Object.entries(data).length !== 0 &&
+                    (
+                        < CurrentDay data={data} />
+                    )
+                }
+            
+
+
         </div >
     )
 }

@@ -1,5 +1,6 @@
 import React from "react"
 import ForecastDays from './ForecastDays'
+
 import { WiHumidity } from "react-icons/wi";
 
 const CurrentDay = ({ data }) => {
