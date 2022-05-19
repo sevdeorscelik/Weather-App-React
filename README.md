@@ -1,6 +1,6 @@
 # Weather App Project
 
-#### You can visit the project [here](https://wetaher-app-react.netlify.app/)
+#### You can visit the project [here](https://weather-app-react-sevde.netlify.app)
 
 ---
 
