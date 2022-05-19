@@ -1,8 +1,8 @@
 import axios from 'axios'
 import { useEffect, useState } from "react"
 import CurrentDay from '../components/CurrentDay'
-import {BgImages} from '../components/BgImages'
-//import Clear from '../images/clearday3.jpg'
+import { BgImages } from '../components/BgImages'
+
 
 const Api = () => {
 
@@ -10,8 +10,11 @@ const Api = () => {
     const apiKey = '35555b2c72ac4a89bf1222251221705'
 
     const [data, setData] = useState({})
-    const [search, setSearch] = useState('izmir')
+    const [search, setSearch] = useState('')
     const [value, setValue] = useState('')
+
+
+
 
 
     useEffect(() => {
@@ -31,10 +34,57 @@ const Api = () => {
         setValue('')
     }
 
+
+    const condition = Object.entries(data).length !== 0 && data.current.condition.text;
+    console.log(condition);
+
+    const coditionStyle = {
+        background:
+            condition ?
+                condition === "Sunny"
+                    ? `url(${BgImages.sunny})`
+                    : condition === "Clear"
+                        ? `url(${BgImages.clear})`
+                        : condition === "Cloudy" ||
+                            condition === "Partly cloudy" ||
+                            condition === "Heavy cloudy"
+                            ? `url(${BgImages.cloudy})`
+                            : condition === "Light rain shower" ||
+                                condition === "Patchy rain possible" ||
+                                condition === "Moderate rain" ||
+                                condition === "Patchy light drizzle" ||
+                                condition === "Light drizzle" ||
+                                condition === "Moderate or heavy rain shower" ||
+                                condition === "Thundery outbreaks possible" ||
+                                condition === "Moderate or heavy rain with thunder" ||
+                                condition === "Light rain"
+
+                                ? `url(${BgImages.rain})`
+                                : condition === "Storm" ||
+                                    condition === "Heavy rain at times"
+                                    ? `url(${BgImages.storm})`
+                                    : condition === "Snowstorm" ||
+                                        condition === "Irregular light snow" ||
+                                        condition === "Light snow" ||
+                                        condition === "Medium heavy snow" ||
+                                        condition === "Thick with snow"
+                                        ? `url(${BgImages.snow})`
+                                        : condition === "Mist" ||
+                                            condition === "Overcast" ||
+                                            condition === "Fog"
+                                            ? `url(${BgImages.overcast})`
+                                            : `url(${BgImages.general})`
+                : `url(${BgImages.clear})`
+    };
+
+
     return (
+
+
         <div
             className='api'
-            style={{ background: `url(${BgImages.night.rain})` , backgroundSize: 'cover', backgroundPosition:'center'}}
+            style={{ background: coditionStyle.background}}
+            
         >
             <input onChange={(e) => setValue(e.target.value)} value={value} type='text' className='input-api' />
             <button onClick={onSubmit} >click</button>
@@ -50,12 +100,20 @@ const Api = () => {
 
 export default Api
 
-
-// style={{ background: `url(${Clear}) `}}
-////style={{background : `url(${Clear}) no-repeat`, height: "100vh"}}
+//backgroundSize: 'cover', backgroundPosition:'center', 
+//style={{ background:`url(${coditionStyle.background})`, backgroundSize: 'cover', backgroundPosition: ' }}
+//style={{background : `url(${BgImages.clear}) no-repeat`, height: "100vh"}}
 
 /*
     < pre >
         {JSON.stringify(data, null, 2)}
     </pre>
 */
+
+
+/*style=
+{
+                
+    { background:`${coditionStyle.background}`, backgroundSize: 'cover', backgroundPosition: ' }
+    
+}*/
