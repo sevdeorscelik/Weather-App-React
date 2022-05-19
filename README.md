@@ -22,4 +22,4 @@ You can visit the project [here](https://wetaher-app-react.netlify.app/)
 
 # Screenshots
 
-![Screenshot]('./images/ss-ap.png')
+![Screenshot]('/public/ss-ap.png')
