@@ -1,6 +1,6 @@
 # Weather App Project
 
-#### You can visit the project [here](https://weather-app-react-sevde.netlify.app)
+### You can visit the project [here](https://weather-app-react-sevde.netlify.app)
 
 ---
 
@@ -13,6 +13,8 @@
 3. Showing the weather information of the city entered in the input
 
 4. Showing the weather forecast for 3 days from the current day.
+
+5. Changing background depending on the weather condition
 
 ---
 
