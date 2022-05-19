@@ -11,7 +11,7 @@ const Api = () => {
     const apiKey = '35555b2c72ac4a89bf1222251221705'
 
     const [data, setData] = useState({})
-    const [search, setSearch] = useState('london')
+    const [search, setSearch] = useState('')
     const [value, setValue] = useState('')
 
 
