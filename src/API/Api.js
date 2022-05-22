@@ -111,9 +111,7 @@ const Api = () => {
 
 export default Api
 
-//backgroundSize: 'cover', backgroundPosition:'center', 
-//style={{ background:`url(${coditionStyle.background})`, backgroundSize: 'cover', backgroundPosition: ' }}
-//style={{background : `url(${BgImages.clear}) no-repeat`, height: "100vh"}}
+
 
 /*
     < pre >
@@ -121,10 +119,3 @@ export default Api
     </pre>
 */
 
-
-/*style=
-{
-                
-    { background:`${coditionStyle.background}`, backgroundSize: 'cover', backgroundPosition: ' }
-    
-}*/
